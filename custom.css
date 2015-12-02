@@ -1,0 +1,22 @@
+html,body{
+  height: 100%;
+}
+
+h1{
+  font-family: 'Open Sans', sans-serif;
+}
+
+h5{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+p{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+.container-fluid{
+  height: 100%;
+  width: auto;
+}
