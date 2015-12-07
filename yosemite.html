@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yosemite National Park</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet"  type="text/css" href="yosemitecss.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="grid">
+      <div class="grid-item"><img src="pic\yosemite\IMG_3553-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\yosemite\IMG_3586-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\yosemite\IMG_3604-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\yosemite\IMG_3614-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\yosemite\IMG_3653-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\yosemite\IMG_3697-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\yosemite\IMG_3705-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\yosemite\IMG_3707-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\yosemite\IMG_3715-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\yosemite\IMG_3786-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\yosemite\IMG_3794-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\yosemite\IMG_3800-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\yosemite\IMG_3966-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\yosemite\IMG_4083-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\yosemite\IMG_3829-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\yosemite\IMG_3958-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\yosemite\IMG_4138-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\yosemite\IMG_3816-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\yosemite\IMG_3814-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\yosemite\IMG_3896-min.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><h1>Photos Taken By Jay D</h1></div>
+    </div>
+  </div>
+</body>
+<script>
+$(document).ready( function() {
+  // init Masonry after all images have loaded
+  var $grid = $('.grid').imagesLoaded( function() {
+    $grid.masonry({
+      itemSelector: '.grid-item',
+      columnWidth: 200
+    });
+  });
+
+});
+</script>
+<script src="http://localhost:35729/livereload.js" ></script>
+</html>

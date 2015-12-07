@@ -1,4 +1,8 @@
-.container{
+
+.grid-item {
+  width: 600px;
+}
+.container-fluid{
   position: relative;
-  top: 130px;
+  left: 36px;
 }

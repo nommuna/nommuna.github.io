@@ -3,34 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet"  type="text/css" href="unslider.css">
   <link rel="stylesheet"  type="text/css" href="zioncss.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-  <script src="js\unslider.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
   <title>Zion National Park</title>
 </head>
 <body>
 
-  <div class="container">
-    <div class="my-slider">
-      <ul>
-        <li><img src="pic\IMG_4422.JPG" class = "img-responsive" alt="Responsive Image"/></li>
-        <li><img src="pic\IMG_4423.JPG" class = "img-responsive" alt="Responsive Image"/></li>
-        <li><img src="pic\IMG_4428.JPG" class = "img-responsive" alt="Responsive Image"/></li>
-        <li><img src="pic\IMG_4472.JPG" class = "img-responsive" alt="Responsive Image"/></li>
-        <li><img src="pic\IMG_4557.JPG" class = "img-responsive" alt="Responsive Image"/></li>
-      </ul>
+  <div class="container-fluid">
+    <div class="grid">
+      <div class="grid-item"><img src="pic\Zion\IMG_4466.jpg" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\Zion\IMG_4423.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\Zion\IMG_4422.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\Zion\IMG_4428.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\Zion\IMG_4472.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\Zion\IMG_4490.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\Zion\IMG_4474.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\Zion\IMG_4557.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\Zion\IMG_4579.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\Zion\IMG_4412.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\Zion\IMG_4494.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\Zion\IMG_4461.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\Zion\IMG_4418.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\Zion\IMG_4434.JPG" class="img-responsive" alt="Responsive image"></div>
+      <div class="grid-item"><img src="pic\Zion\IMG_4573.JPG" class="img-responsive" alt="Responsive image"></div>
     </div>
   </div>
-
-  <script>
-		jQuery(document).ready(function($) {
-			$('.my-slider').unslider();
-		});
-	</script>
-
 </body>
+<script>
+$(document).ready( function() {
+// init Masonry after all images have loaded
+var $grid = $('.grid').imagesLoaded( function() {
+  $grid.masonry({
+    itemSelector: '.grid-item',
+    columnWidth: 200
+  });
+});
+
+});
+
+</script>
+<script src="http://localhost:35729/livereload.js" ></script>
 </html>

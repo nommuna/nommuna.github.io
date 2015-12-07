@@ -2,18 +2,30 @@ html,body{
   height: 100%;
 }
 
-h1{
+a{
   font-family: 'Open Sans', sans-serif;
+  color: black;
+}
+a:hover{
+  color:#FF4E4E;
 }
 
 h5{
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+  color: #FF4E4E;
 }
 
 p{
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+}
+
+hr{
+  background-color:rgba(0,0,0,0.3);
+  height: 1px;
+  border: 0;
+  width: 100%;
 }
 
 .container-fluid{
