@@ -12,11 +12,28 @@
   <title>Munablog</title>
 </head>
 <body>
-  <ul class="nav nav-tabs">
-    <li role="presentation" class="active"><a href="#">Outdoors</a></li>
-    <li role="presentation"><a href="#">About Me</a></li>
-    <li role="presentation"><a href="#"></a></li>
-  </ul>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+          <div class="homepage-hero-module">
+            <div class="video-container">
+              <div class="title text-center">
+                <img class="center-block img-responsive" src="logo.png" alt="Responsive image">
+                <h3>A simple blog, exploring the places i've been too</h3>
+              </div>
+              <div class="filter"></div>
+              <video autoplay loop class="fillWidth">
+                  <source src="vid\Mp4\Agua-natural.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                  <source src="vid\Webm\Agua-natural.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+              </video>
+              <div class="poster hidden">
+                  <img src="vid\Snapshots\Agua-natural.jpg" alt="">
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="container">
     <div class="zion">
@@ -33,10 +50,78 @@
       <p>A week long trip in Yosemite National Park. Backpacked from Tuolumne Meadows to Yosemite Valley. Was about thirtyish miles. Very rewarding and humbling experience.</p>
       <img src="pic\yosemite\IMG_3697-min.JPG" class="img-responsive" alt="Responsive image">
     </div>
+    <hr>
+    <div class="emmaWood">
+      <a href="emmaWood.html"><h1>Emma Wood State Beach</h1></a>
+      <h5>October 4,2015 </h5>
+      <p>Day trip to Emma Wood State Beach. Really cool and relaxing place. Spent the day daydreaming here.</p>
+      <img src="pic\Emma Wood\IMG_4060.JPG" class="img-responsive" alt="Responsive image">
+    </div>
   </div>
-
-
-
 </body>
+<script>
+$( document ).ready(function() {
+
+  scaleVideoContainer();
+
+  initBannerVideoSize('.video-container .poster img');
+  initBannerVideoSize('.video-container .filter');
+  initBannerVideoSize('.video-container video');
+
+  $(window).on('resize', function() {
+      scaleVideoContainer();
+      scaleBannerVideoSize('.video-container .poster img');
+      scaleBannerVideoSize('.video-container .filter');
+      scaleBannerVideoSize('.video-container video');
+  });
+
+});
+
+function scaleVideoContainer() {
+
+  var height = $(window).height() + 5;
+  var unitHeight = parseInt(height) + 'px';
+  $('.homepage-hero-module').css('height',unitHeight);
+
+}
+
+function initBannerVideoSize(element){
+
+  $(element).each(function(){
+      $(this).data('height', $(this).height());
+      $(this).data('width', $(this).width());
+  });
+
+  scaleBannerVideoSize(element);
+
+}
+
+function scaleBannerVideoSize(element){
+
+  var windowWidth = $(window).width(),
+  windowHeight = $(window).height() + 5,
+  videoWidth,
+  videoHeight;
+
+  console.log(windowHeight);
+
+  $(element).each(function(){
+      var videoAspectRatio = $(this).data('height')/$(this).data('width');
+
+      $(this).width(windowWidth);
+
+      if(windowWidth < 1000){
+          videoHeight = windowHeight;
+          videoWidth = videoHeight / videoAspectRatio;
+          $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+
+          $(this).width(videoWidth).height(videoHeight);
+      }
+
+      $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+  });
+}
+</script>
 <script src="http://localhost:35729/livereload.js" ></script>
 </html>
