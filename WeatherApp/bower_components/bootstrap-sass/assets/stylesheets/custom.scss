@@ -1,0 +1,56 @@
+$color1: #b24c63; //rgba(178, 76, 99, 100) pink
+$color2: #2d2d2a; //rgba(45, 45, 42, 100) brownish gray
+$color3: #f7b2bd; //rgba(247, 178, 189, 100) lighter pink
+$color4: #4c4c47; //rgba(76, 76, 71, 100) lighter grey
+$color5: #0c1713; //rgba(12, 23, 19, 100) black
+$color6: #FFF;
+
+$font-family1:'Open Sans', sans-serif;
+$font-family2: 'Assistant', sans-serif;
+
+@import "bootstrap/theme";
+body,html,.container-fluid{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.title{
+    font-family: $font-family1;
+
+}
+
+#inputsection{
+    position: relative;
+    top: 40px;
+}
+
+.hrline{
+    position: relative;
+    top: 60px;
+    width: 50%;
+}
+
+#middlesection{
+    position: relative;
+    top: 100px;
+}
+
+.weathersection{
+    position: relative;
+    top: 40px;
+    font-family: $font-family1;
+    display: none;
+}
+
+.tableatt{
+    width: 350px;
+}
+
+
+
+
+
+
+
+@import 'bootstrap'

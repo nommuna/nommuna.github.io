@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather app</title>
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js">
+  <link rel="stylesheet" href="bower_components/bootstrap-sass/assets/stylesheets/custom.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Assistant|Open+Sans" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="title text-center">
+            <h1>Weather Map</h1>
+            <h2><small>Easily find the weather in your city</small></h2>
+        </div>
+        <div class="row" id="inputsection">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="input-group">
+                      <input id="inputtxt"type="text" class="form-control" placeholder="Search for your city">
+                          <span class="input-group-btn">
+                                <button id="submitbtn" class="btn btn-default" type="button">Search</button>
+                          </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <hr class="hrline">
+            </div>
+        </div>
+        <div class="weathersection" id="tableinfo">
+            <div class="col-md-4 col-md-offset-3">
+                <h2 id="cityName"></h2>
+                <h2 id="numberTemp"></h2>
+                <p id="description"></p>
+                <div class="tableatt">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td class="col-md-3">Wind Speed</td>
+                            <td id="wind"></td>
+                        </tr>
+                        <tr>
+                            <td>Cloudiness</td>
+                            <td id="cloudiness"></td>
+                        </tr>
+                        <tr>
+                            <td>Humidity</td>
+                            <td id="humidity"></td>
+                        </tr>
+                        <tr>
+                            <td>Pressure</td>
+                            <td id="pressure"></td>
+                        </tr>
+                        <tr>
+                            <td>Min. Temperture</td>
+                            <td id="mintemp"></td>
+                        </tr>
+                        <tr>
+                            <td>Max. Temperture</td>
+                            <td id="maxtemp"></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <h2 id="avgname"></h2>
+                <canvas id="myChart" width="500" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+
+<script src="http://localhost:35729/livereload.js"></script>
+<script src="weatherapp.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.min.js"></script>
+</body>
+</html>
